@@ -1,9 +1,10 @@
-class Entry:
-    upvotes = 0
-    downvotes = 0
+class Entry(object):
 
-    def __init__(self, demo):
-        self.demo = demo
+    def __init__(self, url, transcript, up, down):
+        self.url = url
+        self.transcript = transcript
+        self.up = up
+        self.down = down
 
     def upvote(self):
         self.upvotes += 1

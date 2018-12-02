@@ -1,4 +1,4 @@
-class Category:
+class Category(object):
 
     def __init__(self, title, entries):
         self.title = title

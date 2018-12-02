@@ -1,17 +1,19 @@
-class SettingsManager:
+class SettingsManager(object):
 
     learningLang = "en"
+    fluentLang = "ko"
     langs = {"English" : "en", \
-    "Korean" :"ko", \
+    "Korean" : "ko", \
     "French" : "fr",\
     "Italian" : "it",\
     "Japanese" : "ja"}
 
-    def __init__(self, fluentLang):
-        self.fluentLang = fluentLang
 
-    def setFluentLang(self, langAbbrev):
-        self.fluentLang = langAbbrev
+    def setFluentLang(self, language):
+        try:
+            self.fluentLang = langs[language]
+        except:
+            pass
     
     def getFluentLang(self):
-        pass
+        return self.fluentLang
