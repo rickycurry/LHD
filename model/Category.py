@@ -1,8 +1,8 @@
 class Category:
 
-    def __init__(self, title):
+    def __init__(self, title, entries):
         self.title = title
-        self.demo = []
+        self.entries = entries
 
-    def addDemo(self, demo):
-        pass
+    def addEntry(self, entry):
+        self.entries.append(entry)
