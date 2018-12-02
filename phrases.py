@@ -66,6 +66,15 @@ def handle_command(command, settings, end):
         if message == "y":
             print_entry("Greetings", settings, 1)
         message = "Enter a command: "
+    elif command == "food":
+        print_entry("Food", settings, 0)
+        message = "Enter a command: "
+    elif command == "weather":
+        print_entry("Weather", settings, 0)
+        message = "Enter a command: "
+    elif command == "directions":
+        print_entry("Directions", settings, 0)
+        message = "Enter a command: "
     else:
         message = "Enter a command: "
     return settings, message, end
@@ -76,7 +85,8 @@ def handle_command(command, settings, end):
 if __name__ == "__main__":
     #initialize some stuff
     settings = SettingsManager.SettingsManager()
-    print(settings.getFluentLang())
+    #settings.setFluentLang(input("Set default language: "))
+    #print(settings.getFluentLang())
 
 
     end = False
