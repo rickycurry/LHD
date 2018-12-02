@@ -10,10 +10,10 @@ class SettingsManager(object):
 
 
     def setFluentLang(self, language):
-        try:
-            self.fluentLang = langs[language]
-        except:
-            pass
+        #try:
+            self.fluentLang = self.langs[language]
+        #except:
+        #    pass
     
     def getFluentLang(self):
         return self.fluentLang
